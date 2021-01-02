@@ -1,0 +1,61 @@
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/components/form.css' %}">
+{% endblock %}
+
+{% if not exclude_form_tag %}
+    <form
+        method="{{ method|default:"POST" }}"
+        {% if form_class %}class="{{ form_class }}"{% endif %}
+        {% if file_upload %}enctype="multipart/form-data"{% endif %}
+        {% if id %}id="{{ id }}"{% endif %}
+        {% if action %}action="{{ action }}"{% endif %}
+        {% if confirmation_message %}
+            onsubmit="return confirm('{{ confirmation_message }}');"
+        {% else %}
+            onsubmit="submitButton.disabled = true; return true;"
+        {% endif %}
+    >
+    {% endif %}
+
+        {% if method != "GET" %}{% csrf_token %}{% endif %}
+
+        {% if info_text %}
+            <div class="alert alert-info">{{ info_text }}</div>
+        {% endif %}
+
+        {% if form.errors %}
+            <div class="alert alert-danger">
+                <div class="alert-content">
+                    {% if not hide_text %}
+                        <strong>Oops!</strong> Something went wrong.
+                    {% endif %}
+                    {% if form.non_field_errors %}
+                        <ul class="list-group">
+                            {% for error in form.non_field_errors %}
+                                <li class="list-group-item">{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+        {% endif %}
+
+        {% for field in form %}
+            {% include "components/form-field.html" with class="form-field" %}
+        {% endfor %}
+
+        {% if help_text %}
+            <p class="form-text">{{ help_text }}</p>
+        {% endif %}
+
+        <div class="form-group form-group--buttons">
+            <button type="submit" name="submitButton" class="btn {{ button_class|default:"btn-primary btn-md ml-auto" }}" {% if disabled %}disabled="disabled"{% endif %}>{{ button_text|default:"Submit" }}</button>
+            {% if cancel_link %}
+                <span>or</span>
+                <a href="{{ cancel_link }}" class="{{ cancel_link_class|default:"" }}">{{ cancel_text|default:"cancel" }}</a>
+            {% endif %}
+        </div>
+
+{% if not exclude_form_tag %}</form>{% endif %}

@@ -1,0 +1,21 @@
+FROM node:12.16.0 AS client
+
+# Build react app
+COPY client/ /app/client/
+WORKDIR /app/client/
+RUN npm install
+RUN npm run build
+
+FROM python:3.7.7
+
+# Install python dependencies
+COPY requirements.txt /app/
+RUN pip install -r /app/requirements.txt
+
+# Collect the react app into the django statics
+COPY server/ /app/server/
+COPY --from=client /app/client/dist/bundle.js /app/server/static/
+WORKDIR /app/server/
+RUN python manage.py collectstatic
+
+CMD ["gunicorn", "-b", "0.0.0.0:8000", "core.wsgi"]

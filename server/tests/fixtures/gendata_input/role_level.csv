@@ -1,0 +1,23 @@
+role,level,department,role_relation
+Engineering Manager,B,Engineering,Chief Technology Officer
+Software Engineer IV,C,Engineering,Engineering Manager
+Software Engineer III,C,Engineering,Engineering Manager
+Software Engineer II,C,Engineering,Engineering Manager
+Sales Manager,C,Sales,Head of Sales 
+Sales Associate,D,Sales,Sales Manager
+Senior Client Success Manager,B,Client Services,Head of Client Services
+Client Success Manager,B,Client Services,Head of Client Services
+Client Experience Analyst,B,Client Services,Head of Client Services
+Digital Marketing Manager,B,Marketing,Head of Marketing
+SEO Manager,B,Marketing,Head of Marketing
+Events Manager,B,Marketing,Head of Marketing
+Marketing Associate,B,Marketing,Head of Marketing
+Digital Marketing Manager,B,Marketing,Head of Marketing
+Maketing Associage,C,Marketing,Digital Marketing Manage
+Office Manager,C,People,Head of People
+Officer Manager,C,People,Head of People
+People Partner,C,People,Head of People
+Talent Aquisition Partner,C,People,Head of People
+Legal Partner,B,Administration,Chief People Director
+Legal Associate ,B,Administration,Chief People Director
+Accountant,B,Administration,Chief People Director

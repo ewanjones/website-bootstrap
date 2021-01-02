@@ -1,0 +1,67 @@
+first name,last name,role,department,salary,FTE,Location,line manager,Line Manager Role Title,level,some other column
+Shane,Warn,Chief Technology Officer,Engineering,"£130,000",1,London,Bob Sinclair,CEO,Escalo To-confirm,0
+Kathy,Morters,Engineering Manager,Engineering,"£95,000",1,London,Shane Warn,Chief Technology Officer,Escalo To-confirm,1
+Lesley,Pumpkinhead,Engineering Manager,Engineering,"£92,000",1,London,Shane Warn,Chief Technology Officer,Escalo To-confirm,2
+Max,Hill,Engineering Manager,Engineering,"£92,000",1,London,Shane Warn,Chief Technology Officer,Escalo To-confirm,3
+Dipti,Singh,Engineering Manager,Engineering,"£90,000",1,London,Shane Warn,Chief Technology Officer,Escalo To-confirm,4
+Simon ,Garfunkel,,Engineering,"£80,000",1,London,Kathy Morters,Engineering Manager,Escalo To-confirm,5
+Theiry,Henry,,Engineering,"£85,000",1,London,Kathy Morters,Engineering Manager,Escalo To-confirm,6
+Sarah,Clark,,Engineering,"£88,000",1,London,Kathy Morters,Engineering Manager,Escalo To-confirm,7
+Edward,Slater,,Engineering,"£85,000",1,London,Lesley Pumpkinhead,Engineering Manager,Escalo To-confirm,8
+Ivan,Kendel,Software Engineer IV,Engineering,"£88,000",1,London,Lesley Pumpkinhead,Engineering Manager,Escalo To-confirm,9
+Phil,Collins,Software Engineer III,Engineering,"£75,000",1,London,Lesley Pumpkinhead,Engineering Manager,Escalo To-confirm,10
+Zara ,Whitechapel,Software Engineer III,Engineering,"£75,000",1,London,Max Hill,Engineering Manager,Escalo To-confirm,11
+Harry,Whirlpool,Software Engineer III,Engineering,"£75,000",1,London,Dipti Singh,Engineering Manager,Escalo To-confirm,12
+Niamh,Jones,Software Engineer III,Engineering,"£68,000",1,London,Lesley Pumpkinhead,Engineering Manager,Escalo To-confirm,13
+Kelly,Bones,Software Engineer III,Engineering,"£72,000",1,London,Kathy Morters,Engineering Manager,Escalo To-confirm,14
+Juan,Mendez,Software Engineer III,Engineering,"£70,000",1,London,Dipti Singh,Engineering Manager,Escalo To-confirm,15
+Sean,Kelly,Software Engineer III,Engineering,"£70,000",1,London,Max Hill,Engineering Manager,Escalo To-confirm,16
+Steve,Chezne,Software Engineer III,Engineering,"£70,000",1,London,Max Hill,Engineering Manager,Escalo To-confirm,17
+Peter,Turner,Software Engineer III,Engineering,"£68,000",1,London,Dipti Singh,Engineering Manager,Escalo To-confirm,18
+Sandra,Lopez,Software Engineer III,Engineering,"£72,000",1,London,Dipti Singh,Engineering Manager,Escalo To-confirm,19
+Henry,Chapman,Software Engineer II,,"£64,000",1,London,Kathy Morters,Engineering Manager,Escalo To-confirm,20
+Terry,Missent,Software Engineer II,,"£64,000",1,London,Kathy Morters,Engineering Manager,Escalo To-confirm,21
+Tom,Pills,Software Engineer II,,"£60,000",1,London,Dipti Singh,Engineering Manager,Escalo To-confirm,22
+William,Patridge,Software Engineer II,,"£64,000",1,London,Max Hill,Engineering Manager,Escalo To-confirm,23
+Kelly,Spokes,Software Engineer II,,"£62,000",1,London,Lesley Pumpkinhead,Engineering Manager,Escalo To-confirm,24
+Ravi,Jefferson,Software Engineer II,,"£62,000",1,London,Lesley Pumpkinhead,Engineering Manager,Escalo To-confirm,25
+Faz,Pots,Chief Revenue Officier,Sales,"£150,000",1,London,Bob Sinclair,CEO,Escalo To-confirm,26
+Sally ,Mills,Head of Sales EMEA,Sales,"£85,000",1,London,,Chief Revenue Officer,Escalo To-confirm,27
+Derrick,Willis,Head of Sales Americas ,Sales,"$88,000",1,London,Faz Pots,Chief Revenue Officer,,28
+Andy,Morris,Sales Manager,Sales,"$65,000",1,New York,Derrick Willis,Head of Sales Americas,Escalo To-confirm,29
+Andrew ,Kendricks ,Sales Manager,Sales,"$65,000",1,New York,Derrick Willis,Head of Sales Americas,Escalo To-confirm,30
+Jeff,Stones,Sales Manager,Sales,"£58,000",1,London,Sally Mills,Head of Sales EMEA,Escalo To-confirm,31
+Linsey,Ntini,Sales Manager,Sales,"£62,000",1,London,Sally Mills,Head of Sales EMEA,Escalo To-confirm,32
+Tony,Benson,Sales Associate ,Sales,"$48,000",1,New York,Derrick Willis,Head of Sales Americas,Escalo To-confirm,33
+Udini,Mejera ,Sales Associate ,Sales,"£35,000",1,London,Sally Mills,Head of Sales EMEA,Escalo To-confirm,34
+Mayowa,Taiwo,Sales Associate ,Sales,"£39,000",1,London,Sally Mills,Head of Sales EMEA,Escalo To-confirm,35
+Wesley,Mandarin,Sales Associate ,Sales,"£39,000",1,London,Sally Mills,Head of Sales EMEA,Escalo To-confirm,36
+Eriksson,Sony,Head of Client Services,Client Services,"£90,000",1,London,Bob Sinclair,CEO,Escalo To-confirm,37
+Patrick ,Downes,Senior Client Success Manager,Client Services,"$88,000",1,New York,Eriksson Sony,Head of Client Services,Escalo To-confirm,38
+Fred,Trueman,Client Success Manager,Client Services,"£50,000",1,London,Phillip Morris,Head of Client Services,Escalo To-confirm,39
+Mark,Jenson,Client Success Manager,Client Services,"£53,000",1,London,Phillip Morris,Head of Client Services,Escalo To-confirm,40
+Tom,Franks,Client Experience Analyst,Client Services,"£40,000",1,London,Phillip Morris,Head of Client Services,Escalo To-confirm,41
+Billy,Bond,Client Experience Analyst,Client Services,"£35,000",1,London,Phillip Morris,Head of Client Services,Escalo To-confirm,42
+Sasha,Haven,Client Experience Analyst,Client Services,"$42,000",1,New York,Patrick Downes,Head of Client Services,Escalo To-confirm,43
+Phillip,Morris,Senior Client Success Manager,Client Services,"£60,000",1,London,Eriksson Sony,Head of Client Services,Escalo To-confirm,44
+Kate,Wensleydale ,Head of Marketing,Marketing,"£60,000",1,London,Faz Pots,Chief Revenue Officer,Escalo To-confirm,45
+Anna,Savoury,Digital Marketing Manager,Marketing,"£47,000",1,London,,Head of Marketing,Escalo To-confirm,46
+Hanna,Parks,SEO Manager,Marketing,"£45,000",1,London,,Head of Marketing,Escalo To-confirm,47
+Magaret,Loon,Events Manager,Marketing,"£38,000",1,London,,Head of Marketing,Escalo To-confirm,48
+Elizabeth,Feathers,Marketing Associate,Marketing,"£29,000",1,London,,Head of Marketing,Escalo To-confirm,49
+Martin,Garrid,Digital Marketing Manager,Marketing,"$50,000",1,New York,,Head of Marketing,Escalo To-confirm,50
+Sophie,Watts,Maketing Associage ,Marketing,"$38,000",1,New York,Martin Garrid,Digital Marketing Manager,Escalo To-confirm,51
+Jess ,Brown,Chief People Director,People,"£95,000",1,London,Bob Sinclair,CEO,Escalo To-confirm,52
+Ewelina,Szejovik,Office Manager,People,"$40,000",1,New York,Rispa Dilz,Head of People Americas,Escalo To-confirm,53
+Brett,Lee,Officer Manager,People,"£34,000",1,London,Rispa Dilz,Head of People EMEA,Escalo To-confirm,54
+Atom,Kennedy,Head of People Americas,People,"$80,000",1,New York,Jess Brown,Chief People Director,Escalo To-confirm,55
+Jamie,Osbourne,Head of People EMEA,People,"£65,000",1,New York,Jess Brown,Chief People Director,Escalo To-confirm,56
+Kelly,Sneldon,People Partner,People,"£45,000",1,London,Jamie Osbourne,Head of People EMEA,Escalo To-confirm,57
+Sam,Jones,People Partner,People,"£45,000",1,London,Jamie Osbourne,Head of People EMEA,Escalo To-confirm,58
+Ray,Illis,Talent Aquisition Partner,People,"£40,000",1,London,Jamie Osbourne,Head of People EMEA,Escalo To-confirm,59
+Ryan,Misling ,People Partner,People,"$57,000",1,New York,Atom Kennedy,Head of People Americas,Escalo To-confirm,60
+Shane,Hogan,Legal Partner,Administration,"£60,000",0.5,London,Jess Brown,Chief People Director,Escalo To-confirm,61
+Sarah,Jane,Legal Associate ,Administration,"£45,000",1,London,Jess Brown,Chief People Director,Escalo To-confirm,62
+David,Sivley ,Accountant ,Administration,"£54,000",0.5,London,Jess Brown,Chief People Director,Escalo To-confirm,63
+Bob,Sinclair ,CEO,-,"£40,000",1,London,-,-,Escalo To-confirm,64
+Gareth,Symonds,PA to CEO,Administration,"£30,000",1,London,Bob Sinclair,CEO ,Escalo To-confirm,65

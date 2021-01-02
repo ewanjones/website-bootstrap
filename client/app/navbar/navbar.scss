@@ -1,0 +1,52 @@
+.active-link {
+    li {
+        background-color: rgba($light-primary, 0.8);
+        color: $white;
+
+        &:hover {
+            color: $ink-dark;
+        }
+    }
+}
+
+
+.nav-bar {
+    @extend .col-md-3;
+    @extend .col-sm-4;
+    @extend .nav;
+    @extend .flex-column;
+    @extend .nav-pills;
+    padding: 10px;
+    background-color: $snow-light;
+
+    ul {
+        padding: 0;
+
+        a {
+            font-height: 100%;
+            width: 100%;
+            color: $ink-dark;
+            font-weight: 300;
+            font-size: 0.8em;
+
+            li {
+                @extend .nav-item;
+                @extend .nav-link;
+                padding: 5px 15px;
+
+                &:hover {
+                    background-color: rgba($light-primary, 0.3);
+                    cursor: pointer;
+
+                }
+
+            }
+
+            &:hover {
+                text-decoration: none;
+                font-weight: 500;
+            }
+
+        }
+    }
+}

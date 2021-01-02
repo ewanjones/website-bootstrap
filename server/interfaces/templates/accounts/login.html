@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/account.css' %}">
+{% endblock %}
+
+{% block main %}
+    <div class="container page">
+        <div class="row">
+            {% include 'components/form.html' with form=form  button_text="Login" form_class="login-form"%}
+        </div>
+
+        <div class="row">
+            <p>Not got an account?   <a href="{% url 'register' %}">Register</a></p>
+        </div>
+        <div class="row">
+            <p>Forgotten password?   <a href="{% url 'password-reset-request' %}">Click here</a></p>
+        </div>
+    </div>
+{% endblock %}

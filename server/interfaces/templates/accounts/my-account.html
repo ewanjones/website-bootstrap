@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/account.css' %}">
+{% endblock %}
+
+{% block main %}
+    <div class="container page">
+        <div class="row">
+            <p>Edit your account here</p>
+        </div>
+        <div class="row">
+            {% include 'components/form.html' with form=form form_class="forgot-password-form" button_text="Submit" %}
+        </div>
+    </div>
+{% endblock %}

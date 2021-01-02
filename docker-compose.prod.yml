@@ -1,0 +1,34 @@
+version: "3"
+
+services:
+
+    nginx:
+      image: nginx:latest
+      container_name: nginx
+      volumes:
+        - ./nginx.prod.conf:/etc/nginx/nginx.conf
+        - static_files:/static/
+      ports:
+        - 80:80
+        - 443:443
+      depends_on:
+        - app
+
+    app:
+        build:
+          context: .
+          dockerfile: Dockerfile.prod
+        image: ewanjones/escalo_prod:latest
+        working_dir: /app/server
+        command: bash -c "gunicorn core.wsgi --bind 0.0.0.0:8000"
+        environment:
+          - DJANGO_SETTINGS_MODULE=core.settings.production
+        volumes:
+            - static_files:/static/
+            - /data/db.sqlite3:/app/server/db.sqlite3
+            - /root/org-design/server/.env:/app/server/.env
+        ports:
+          - "8000:8000"
+
+volumes:
+  static_files:

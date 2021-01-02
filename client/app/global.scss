@@ -1,0 +1,48 @@
+$icon-font-path: "~bootstrap/scss/";
+@import "~bootstrap/scss/bootstrap.scss";
+
+
+// Colours
+
+
+$white: #FFFFFF;
+$dark-primary: #33658A;
+$dark-secondary: #4C5B61;
+$light-primary: #79C6BF;
+$action-primary: #072AC8;
+
+
+$green-light: #29EB7F;
+$green: #13CE66;
+$green-dark: #0F9F4F;
+
+$red-light: #FEAD9A;
+$red: #DE3618;
+$red-dark: #FEAD9A;
+
+// dark gray
+$ink-light: #8492A6;
+$ink: #273444;
+$ink-dark: #1F2D3D;
+
+// light gray
+$smoke-light: #E0E6ED;
+$smoke: #D3DCE6;
+$smoke-dark: #C0CCDA;
+
+$snow-light: #F9FAFC;
+$snow: #EFF2F7;
+$snow-dark: #E5E9F2;
+
+
+$success: $green;
+$danger: $red;
+
+
+// Tables
+
+
+.table {
+    @extend .table;
+    background-color: white;
+}

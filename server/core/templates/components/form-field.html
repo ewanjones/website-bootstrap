@@ -1,0 +1,67 @@
+{% if field.is_checkbox %}
+    <div id="{{ field.name }}_wrapper" class="checkbox {% if class %}{{ class }}{% endif %}" {% if hidden %}style="display:none"{% endif %}>
+        {{ field }}
+        <label for="{{ field.id_for_label }}" {% if hide_label %}class="sr-only"{% endif %}>{{ field.label }}</label>
+        {% if field.errors and not hide_errors %}
+            {% for error in field.errors %}
+                <div class="error-text">{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+        {% if field.help_text %}
+            <div class='helpText'>
+                {# We allow HTML within form help fields #}
+                {{ field.help_text|safe }}
+            </div>
+        {% endif %}
+    </div>
+{% elif field.is_radio %}
+    <div id="{{ field.name }}_wrapper" class="{% if class %}{{ class }}{% endif %}">
+        {% for choice in field %}
+            <div class="radio-stacked">
+                <label for="{{ choice.id_for_label }}" {% if hide_label %}class="sr-only"{% endif %}>
+                    {{ choice.tag }}
+                    <span></span>
+                    {{ choice.choice_label }}
+                </label>
+            </div>
+        {% endfor %}
+        {% if field.errors and not hide_errors %}
+            {% for error in field.errors %}
+                <div class="error-text">{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+        {% if field.help_text %}
+            <div class='helpText'>
+                {# We allow HTML within form help fields #}
+                {{ field.help_text|safe }}
+            </div>
+        {% endif %}
+    </div>
+{% else %}
+    <div
+        id="{{ field.name }}_wrapper"
+        class="form-group d-flex flex-column {% if field.is_select %}dropdown{% elif field.is_textarea %}textarea{% else %}field{% endif %} {% if field.errors %}error{% endif %} {% if hidden or field.is_hidden %}hidden{% endif %} {% if class %}{{ class }}{% endif %}"
+    >
+
+        <label
+            for="{{ field.id_for_label }}"
+            class="{% if hide_label %}sr-only{% endif %}{% if field.field.required %}required{% else %}{% endif %}"
+        >
+        <strong>{{ field.label }}</strong>  {% if not field.field.required %}(optional){% else %}{% endif %}
+        </label>
+
+        {{ field }}
+
+        {% if field.errors and not hide_errors %}
+            {% for error in field.errors %}
+                <div class="error-text">{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+        {% if field.help_text %}
+            <div class='helpText'>
+                {# We allow HTML within form help fields #}
+                {{ field.help_text|safe }}
+            </div>
+        {% endif %}
+    </div>
+{% endif %}
