@@ -27,13 +27,17 @@ env.read_envfile(path=env_filepath)
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "+*9mw^776cjtw4&qtkx*x_h-z1-u8dlquxjkjnz6roe2j)wk^4"
+SECRET_KEY = env.str("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # False by default
 DEBUG = False
 
 ALLOWED_HOSTS = []
+
+# Website details
+
+BUSINESS_NAME = "Example Website"
 
 
 # Emails
@@ -133,9 +137,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTH_USER_MODEL = "accounts.User"
 
-#  LOGIN_URL = "/"
-#  LOGIN_REDIRECT_URL = "/"
-#  LOGOUT_REDIRECT_URL = "/"
+LOGIN_URL = "/account/login"
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/about-us"
 
 
 # REST API

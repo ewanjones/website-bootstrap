@@ -17,6 +17,10 @@ class Login(LoginView):
     template_name = "accounts/login.html"
     success_url = settings.LOGIN_REDIRECT_URL
 
+    def form_invalid(self, form):
+        print(form.errors)
+        return super().form_invalid(form)
+
 
 class Logout(LogoutView):
     redirect_url = settings.LOGOUT_REDIRECT_URL
@@ -32,12 +36,10 @@ class Register(FormView):
         data = form.cleaned_data
         try:
             accounts.register(
-                full_name=data["full_name"],
                 nickname=data["nickname"],
                 email=data["email"],
                 phone=data["phone"],
                 password=data["password"],
-                business_name=data["business_name"],
             )
         except accounts.UnableToRegister as e:
             form.add_error(None, e)
@@ -84,7 +86,6 @@ class MyAccount(FormView):
     def get_initial(self):
         user = self.request.user
         return {
-            "full_name": user.full_name,
             "nickname": user.nickname,
             "email": user.email,
             "phone": user.phone,

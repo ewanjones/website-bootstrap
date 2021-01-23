@@ -15,7 +15,7 @@ class UnableToRegister(Exception):
 
 
 @transaction.atomic
-def register(*, full_name, nickname, email, phone, password, business_name):
+def register(*, nickname, email, phone, password):
     """
     Create a user and business.
     """
@@ -26,7 +26,6 @@ def register(*, full_name, nickname, email, phone, password, business_name):
         user = account_models.User.objects.create_user(
             email=email,
             password=password,
-            full_name=full_name,
             nickname=nickname,
             phone=phone,
             activation_code=activation_code,
@@ -39,7 +38,7 @@ def register(*, full_name, nickname, email, phone, password, business_name):
     )
     body = textwrap.dedent(
         f"""
-        Welcome to Escalo!
+        Welcome to {settings.BUSINESS_NAME}!
 
         Visit {activation_link} to activate your account
     """

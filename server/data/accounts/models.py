@@ -1,15 +1,11 @@
-from django.contrib.auth import base_user
-from django.contrib.auth.models import BaseUserManager
+from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.db import models
 
 
 class UserManager(BaseUserManager):
-    def create_user(
-        self, *, email, password, full_name, nickname, activation_code, phone=None
-    ):
+    def create_user(self, *, email, password, nickname, activation_code, phone=None):
         user = self.create(
             email=email,
-            full_name=full_name,
             nickname=nickname,
             phone=phone,
             activation_code=activation_code,
@@ -19,8 +15,7 @@ class UserManager(BaseUserManager):
         return user
 
 
-class User(base_user.AbstractBaseUser):
-    full_name = models.CharField(max_length=100)
+class User(AbstractUser):
     nickname = models.CharField(max_length=50)
 
     email = models.CharField(unique=True, max_length=100)
@@ -32,9 +27,10 @@ class User(base_user.AbstractBaseUser):
 
     password_reset_code = models.CharField(max_length=255, blank=True)
 
-    USERNAME_FIELD = "email"
-
     objects = UserManager()
+
+    USERNAME_FIELD = "email"
+    REQUIRED_FIELDS = ["nickname"]
 
     def set_active(self):
         self.is_active = True

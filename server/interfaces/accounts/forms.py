@@ -1,19 +1,14 @@
 from django import forms
-from django.core.exceptions import ValidationError
-
-
-def is_phone(value):
-    if not value.isdigit() and not len(value) == 11:
-        raise ValidationError("Please enter a valid phone number")
+from data.accounts import validators
 
 
 class Register(forms.Form):
-    full_name = forms.CharField(max_length=100)
     nickname = forms.CharField(max_length=50)
     email = forms.EmailField(max_length=100)
-    phone = forms.CharField(max_length=15, required=False, validators=[is_phone])
+    phone = forms.CharField(
+        max_length=15, required=False, validators=[validators.is_phone]
+    )
     password = forms.CharField(max_length=30, widget=forms.PasswordInput())
-    business_name = forms.CharField(max_length=100)
 
 
 class ForgotPassword(forms.Form):
@@ -31,7 +26,6 @@ class PasswordReset(forms.Form):
 
 
 class MyAccount(forms.Form):
-    full_name = forms.CharField(max_length=100)
     nickname = forms.CharField(max_length=50)
     email = forms.CharField(max_length=100)
     phone = forms.CharField(max_length=15, required=False)
